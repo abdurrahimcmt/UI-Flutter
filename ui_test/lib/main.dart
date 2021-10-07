@@ -36,12 +36,32 @@ class HomePage extends StatelessWidget {
             IconButton(onPressed: (massage), icon: Icon(Icons.ac_unit_outlined))
           ],
         ),
-        body: Center(
-          child: Container(
-            height: MediaQuery.of(context).size.height / 5,
-            width: MediaQuery.of(context).size.width / 4,
-            color: Colors.blueAccent,
-          ),
+        body: ListView(
+          children: [
+            ListTile(
+              title: Text(
+                  'www.facebook.com/profile.php?id=100008350303339&sk=about'),
+              leading: CircleAvatar(
+                child: Icon(Icons.facebook),
+              ),
+              trailing: Icon(Icons.manage_accounts),
+              tileColor: Colors.lime,
+            ),
+            ListTile(
+              title: Text('abdurrahimcmt@gmail.com'),
+              leading: CircleAvatar(
+                child: Icon(Icons.mail_outline_sharp),
+              ),
+              trailing: Icon(Icons.ac_unit),
+            ),
+            ListTile(
+              title: Text('www.instagram.com/abdurrahimrrs/'),
+              leading: CircleAvatar(
+                child: Icon(Icons.find_in_page),
+              ),
+              trailing: Icon(Icons.ac_unit),
+            ),
+          ],
         ),
       ),
     );
