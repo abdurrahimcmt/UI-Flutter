@@ -27,7 +27,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //
     return SafeArea(
+      //Scaffold Work like main layout for an app
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
@@ -41,8 +43,22 @@ class HomePage extends StatelessWidget {
           ],
         ),
         body: Center(
-          child: Image(
-            image: AssetImage('assets/Bg2.jpg'),
+          child: Stack(
+            clipBehavior: Clip.none,
+            alignment: Alignment.bottomCenter,
+            children: [
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.blue,
+              ),
+              Positioned(
+                bottom: -20,
+                child: CircleAvatar(
+                  child: Icon(Icons.camera),
+                ),
+              ),
+            ],
           ),
         ),
       ),
