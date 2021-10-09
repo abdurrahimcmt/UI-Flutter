@@ -41,22 +41,8 @@ class HomePage extends StatelessWidget {
           ],
         ),
         body: Center(
-          child: Stack(
-            clipBehavior: Clip.none,
-            alignment: Alignment.bottomCenter,
-            children: [
-              Container(
-                height: 100,
-                width: 100,
-                color: Colors.blue,
-              ),
-              Positioned(
-                bottom: -20,
-                child: CircleAvatar(
-                  child: Icon(Icons.camera),
-                ),
-              ),
-            ],
+          child: Image(
+            image: AssetImage('assets/Bg2.jpg'),
           ),
         ),
       ),
